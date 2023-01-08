@@ -47,7 +47,7 @@ describe('ThemeService', () => {
     themeService.definePrimaryState();
 
     themeService.state$.subscribe((theme) => {
-      expect(theme).toBe(ThemeCollection.LIGHT);
+      expect(theme).toBe(ThemeCollection.DARK);
     });
   });
 
@@ -60,6 +60,6 @@ describe('ThemeService', () => {
   it("should contain LIGHT_THEME", () => {
     themeService.setState(ThemeCollection.LIGHT);
 
-    expect(themeService.isDarkTheme()).toBe(true);
+    expect(themeService.isLightTheme()).toBe(true);
   })
 });
