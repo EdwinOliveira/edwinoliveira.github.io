@@ -40,13 +40,13 @@ describe('LocalStorageService', () => {
     storageService.createToken(TokenCollection.LOCALE, LocaleCollection.EN)
     storageService.clearToken(TokenCollection.LOCALE)
 
-    expect(storageService.fetchToken(TokenCollection.LOCALE)).not.toBe(LocaleCollection.EN)
+    expect(storageService.fetchToken(TokenCollection.LOCALE)).toBeNull();
   })
 
   it("should clear the TOKEN_COLLECTION", () => {
     storageService.createToken(TokenCollection.LOCALE, LocaleCollection.EN)
     storageService.clearToken(TokenCollection.LOCALE)
 
-    expect(storageService.fetchToken(TokenCollection.LOCALE)).not.toBe(LocaleCollection.EN)
+    expect(storageService.fetchToken(TokenCollection.LOCALE)).toBeNull();
   })
 });
