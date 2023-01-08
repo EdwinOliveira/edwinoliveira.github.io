@@ -5,4 +5,8 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: '',
 })
-export class AppComponent {}
+export class AppComponent {
+  public constructor() {
+    console.log("")
+  }
+}

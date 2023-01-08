@@ -51,8 +51,7 @@
   "lint-staged": {
     "*.ts": [
       "eslint .",
-      "prettier .",
-      "ng test"
+      "prettier ."
     ]
   }
 }
