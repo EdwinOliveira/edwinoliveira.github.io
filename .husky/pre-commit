@@ -2,4 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 yarn lint-staged
-ng test --watch --browsers ChromeHeadless
+ng test --no-watch --browsers ChromeHeadless
