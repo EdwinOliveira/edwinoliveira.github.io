@@ -5,8 +5,4 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: '',
 })
-export class AppComponent {
-  public constructor() {
-    console.log("")
-  }
-}
+export class AppComponent {}
