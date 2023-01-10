@@ -38,4 +38,12 @@ export class ThemeService {
   public isLightTheme(theme: ThemeCollection): boolean {
     return theme === ThemeCollection.LIGHT;
   }
+
+  public get darkTheme(): ThemeCollection {
+    return ThemeCollection.DARK;
+  }
+
+  public get lightTheme(): ThemeCollection {
+    return ThemeCollection.LIGHT;
+  }
 }

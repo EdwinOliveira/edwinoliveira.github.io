@@ -1,5 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { LocalStorageService } from './shared/services/storage/local-storage/local-storage.service';
+import { AbstractStorage } from './shared/services/storage/storage.abstract';
+import { ThemeService } from './shared/services/theme/theme.service';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -7,6 +10,11 @@ describe('AppComponent', () => {
       imports: [
         AppComponent
       ],
+      providers: [ThemeService,
+        {
+          provide: AbstractStorage,
+          useClass: LocalStorageService,
+        }]
     }).compileComponents();
   });
 

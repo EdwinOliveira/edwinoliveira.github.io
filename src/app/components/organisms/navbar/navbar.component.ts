@@ -27,6 +27,8 @@ import { DividerComponent } from "../../atoms/divider/divider.component";
         min-height: 4rem;
         padding: 0 1.5rem;
 
+        color: var(--light--primary--color);
+
         &--box {
           min-height: inherit;
           

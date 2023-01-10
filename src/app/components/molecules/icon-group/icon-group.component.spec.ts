@@ -1,5 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { IconCollection } from 'src/app/shared/@constants/icon.collection';
+import { LocalStorageService } from 'src/app/shared/services/storage/local-storage/local-storage.service';
+import { AbstractStorage } from 'src/app/shared/services/storage/storage.abstract';
 import { IconService } from '../../atoms/icons/icon.service';
 import { IconGroupComponent } from './icon-group.component';
 
@@ -7,7 +9,11 @@ describe('IconGroupComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [IconGroupComponent],
-      providers: [IconService]
+      providers: [IconService,
+        {
+          provide: AbstractStorage,
+          useClass: LocalStorageService,
+        }]
     }).compileComponents();
   });
 
