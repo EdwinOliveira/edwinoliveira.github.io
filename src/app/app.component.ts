@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { AboutMeComponent } from './components/organisms/about-me/about-me.component';
 import { NavbarComponent } from './components/organisms/navbar/navbar.component';
 import { ThemeService } from './shared/services/theme/theme.service';
 
@@ -10,6 +11,7 @@ import { ThemeService } from './shared/services/theme/theme.service';
     <div class="wrapper" *ngIf="this.themeService.state$ | async as state" [ngClass]="state">
       <img class="wallpaper" src="./../assets/svgs/splashart-bg.jpg" alt="background">
       <app-navbar></app-navbar>
+      <app-about-me></app-about-me>
     </div>
   `,
   styles: [
@@ -41,7 +43,7 @@ import { ThemeService } from './shared/services/theme/theme.service';
       }
     `,
   ],
-  imports: [NavbarComponent, CommonModule],
+  imports: [NavbarComponent, CommonModule, AboutMeComponent],
   providers: [ThemeService],
 })
 export class AppComponent {

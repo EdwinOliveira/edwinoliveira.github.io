@@ -3,12 +3,12 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   standalone: true,
-  selector: 'app-brand-typography',
+  selector: 'app-paragraph-typography',
   template: '<span class="wrapper" *ngIf="this.content !== null"> {{ this.content }} </span>',
-  styles: ['.wrapper {font-size: clamp(0.75rem, 0.75rem + 0.25rem, 1.25rem); font-weight: bold;}'],
+  styles: ['.wrapper {font-size: clamp(0.85rem, 0.85rem + 0.25rem, 1.35rem); font-weight: 500;}'],
   imports: [CommonModule]
 })
 
-export class BrandTypographyComponent {
+export class ParagraphTypographyComponent {
   @Input() public content: string | null = null;
 }
