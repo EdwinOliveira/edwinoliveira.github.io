@@ -1,21 +1,27 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { AboutMeComponent } from './components/organisms/about-me/about-me.component';
 import { NavbarComponent } from './components/organisms/navbar/navbar.component';
+import { AboutMeComponent } from './components/templates/about-me/about-me.component';
 import { ThemeService } from './shared/services/theme/theme.service';
+import { AcademicCareerComponent } from "./components/templates/academic-career/academic-career.component";
+import { ProfessionalCareerComponent } from "./components/templates/professional-career/professional-career.component";
+import { TechStackComponent } from "./components/templates/tech-stack/tech-stack.component";
 
 @Component({
-  standalone: true,
-  selector: 'app-root',
-  template: `
+    standalone: true,
+    selector: 'app-root',
+    template: `
     <div class="wrapper" *ngIf="this.themeService.state$ | async as state" [ngClass]="state">
       <img class="wallpaper" src="./../assets/svgs/splashart-bg.jpg" alt="background">
       <app-navbar></app-navbar>
       <app-about-me></app-about-me>
+      <app-academic-career></app-academic-career>
+      <app-professional-career></app-professional-career>
+      <app-tech-stack></app-tech-stack>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .light-theme {
         background-color: var(--light--primary--color);
         color: var(--dark--primary--color);
@@ -42,9 +48,9 @@ import { ThemeService } from './shared/services/theme/theme.service';
         }
       }
     `,
-  ],
-  imports: [NavbarComponent, CommonModule, AboutMeComponent],
-  providers: [ThemeService],
+    ],
+    providers: [ThemeService],
+    imports: [NavbarComponent, CommonModule, AboutMeComponent, AcademicCareerComponent, ProfessionalCareerComponent, TechStackComponent]
 })
 export class AppComponent {
   public constructor(private readonly _themeService: ThemeService) {

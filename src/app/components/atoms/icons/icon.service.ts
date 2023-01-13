@@ -14,4 +14,8 @@ export class IconService {
   public get themeIcon(): IconCollection {
     return IconCollection.THEME;
   }
+
+  public get companyIcon(): IconCollection {
+    return IconCollection.COMPANY;
+  }
 }

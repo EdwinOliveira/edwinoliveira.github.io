@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   selector: 'app-header-typography',
   template: '<span class="wrapper" *ngIf="this.content !== null"> {{ this.content }} </span>',
-  styles: ['.wrapper {font-size: clamp(0.75rem, 0.75rem + 0.25rem, 1.25rem); font-weight: 500; color: #adadad;}'],
+  styles: ['.wrapper {font-size: clamp(0.65rem, 0.65rem + 0.25rem, 1.15rem); font-weight: 500; color: #adadad;}'],
   imports: [CommonModule]
 })
 
