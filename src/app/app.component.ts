@@ -5,7 +5,6 @@ import { AboutMeComponent } from './components/templates/about-me/about-me.compo
 import { ThemeService } from './shared/services/theme/theme.service';
 import { AcademicCareerComponent } from "./components/templates/academic-career/academic-career.component";
 import { ProfessionalCareerComponent } from "./components/templates/professional-career/professional-career.component";
-import { TechStackComponent } from "./components/templates/tech-stack/tech-stack.component";
 
 @Component({
     standalone: true,
@@ -18,7 +17,6 @@ import { TechStackComponent } from "./components/templates/tech-stack/tech-stack
         <app-about-me></app-about-me>
         <app-academic-career></app-academic-career>
         <app-professional-career></app-professional-career>
-        <app-tech-stack></app-tech-stack>
       </div>
     </div>
   `,
@@ -40,7 +38,7 @@ import { TechStackComponent } from "./components/templates/tech-stack/tech-stack
         flex-direction: column;
 
         .wallpaper {
-          height: 60vh;
+          height: 50vh;
           width: 100vw;
         }
 
@@ -61,7 +59,7 @@ import { TechStackComponent } from "./components/templates/tech-stack/tech-stack
     `,
     ],
     providers: [ThemeService],
-    imports: [NavbarComponent, CommonModule, AboutMeComponent, AcademicCareerComponent, ProfessionalCareerComponent, TechStackComponent]
+    imports: [NavbarComponent, CommonModule, AboutMeComponent, AcademicCareerComponent, ProfessionalCareerComponent]
 })
 export class AppComponent {
   public constructor(private readonly _themeService: ThemeService) {
