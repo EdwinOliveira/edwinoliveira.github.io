@@ -1,0 +1,12 @@
+<div class="wrapper" *ngFor="let item of itemCollection">
+  <div class="wrapper--box">
+    <div class="wrapper--box group">
+      <div class="wrapper--box group icon">
+        <app-company-icon></app-company-icon>
+      </div>
+      <app-span-typography [content]="item.content"></app-span-typography>
+    </div>
+    <app-sub-span-typography [content]="item.subContent"></app-sub-span-typography>
+    <app-sub-span-typography [content]="item.thirdContent"></app-sub-span-typography>
+  </div>
+</div>

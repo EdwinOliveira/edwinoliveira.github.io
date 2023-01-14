@@ -1,16 +1,29 @@
 import { Component } from '@angular/core';
 import { DividerComponent } from "../../atoms/divider/divider.component";
-import { SpanTypographyComponent } from "../../atoms/typographies/span/span-typography.component";
-import { SubSpanTypographyComponent } from "../../atoms/typographies/sub-span/sub-span-typography.component";
 import { HeaderTypographyComponent } from "../../atoms/typographies/header/header-typography.component";
-import { CompanyIconComponent } from "../../atoms/icons/company-icon/company-icon.component";
+import { CardComponent } from '../../organisms/card/card.component';
+import { CardModel } from '../../organisms/card/card.model';
 
 @Component({
     standalone: true,
     selector: 'app-professional-career',
     templateUrl: './professional-career.component.html',
     styleUrls: ["./professional-career.component.scss"],
-    imports: [DividerComponent, SpanTypographyComponent, SubSpanTypographyComponent, HeaderTypographyComponent, CompanyIconComponent]
+    imports: [HeaderTypographyComponent, DividerComponent, CardComponent]
 })
+export class ProfessionalCareerComponent {
+  private readonly _collection: Array<CardModel>;
 
-export class ProfessionalCareerComponent {}
+  public constructor() {
+    this._collection = new Array<CardModel>(
+      new CardModel("Software Engineer", "BJSS", "07/2022 - Current"),
+      new CardModel("Software Engineer", "Devoteam", "04/2021 - 07/2022"),
+      new CardModel("Software Engineer", "Libertrium", "09/2020 - 04/2021"),
+      new CardModel("Internship/Freelance", "TomiWorld", "02/2020 - 09/2020"),
+    );
+  }
+
+  public get collection(): Array<CardModel> {
+    return this._collection;
+  }
+}

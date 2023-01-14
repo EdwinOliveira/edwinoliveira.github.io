@@ -14,10 +14,12 @@ import { TechStackComponent } from "./components/templates/tech-stack/tech-stack
     <div class="wrapper" *ngIf="this.themeService.state$ | async as state" [ngClass]="state">
       <img class="wallpaper" src="./../assets/svgs/splashart-bg.jpg" alt="background">
       <app-navbar></app-navbar>
-      <app-about-me></app-about-me>
-      <app-academic-career></app-academic-career>
-      <app-professional-career></app-professional-career>
-      <app-tech-stack></app-tech-stack>
+      <div class="wrapper--box">
+        <app-about-me></app-about-me>
+        <app-academic-career></app-academic-career>
+        <app-professional-career></app-professional-career>
+        <app-tech-stack></app-tech-stack>
+      </div>
     </div>
   `,
     styles: [
@@ -46,7 +48,16 @@ import { TechStackComponent } from "./components/templates/tech-stack/tech-stack
           position: fixed;
           width: 100vw;
         }
+
+        .wrapper--box {
+          padding: 1rem 10%;
+
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
       }
+
     `,
     ],
     providers: [ThemeService],

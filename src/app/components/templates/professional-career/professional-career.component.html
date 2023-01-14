@@ -1,42 +1,7 @@
 <div class="wrapper">
   <div class="wrapper--box">
     <app-header-typography [content]="'My Professional Career'"></app-header-typography>
-    <div class="content">
-      <div class="content--group">
-        <div class="content--group box">
-          <app-company-icon></app-company-icon>
-        </div>
-        <app-span-typography [content]="'Software Engineer | @Bjss'"></app-span-typography>
-      </div>
-      <app-sub-span-typography [content]="'07/2022 - Current'"></app-sub-span-typography>
-    </div>
-    <div class="content">
-      <div class="content--group">
-        <div class="content--group box">
-          <app-company-icon></app-company-icon>
-        </div>
-        <app-span-typography [content]="'Junior Software Engineer | @Devoteam'"></app-span-typography>
-      </div>
-      <app-sub-span-typography [content]="'04/2021 - 07/2022'"></app-sub-span-typography>
-    </div>
-    <div class="content">
-      <div class="content--group">
-        <div class="content--group box">
-          <app-company-icon></app-company-icon>
-        </div>
-        <app-span-typography [content]="'Junior Software Engineer | @Libertrium'"></app-span-typography>
-      </div>
-      <app-sub-span-typography [content]="'09/2020 - 04/2021'"></app-sub-span-typography>
-    </div>
-    <div class="content">
-      <div class="content--group">
-        <div class="content--group box">
-          <app-company-icon></app-company-icon>
-        </div>
-        <app-span-typography [content]="'Freelance/Internship | @TomiWorld'"></app-span-typography>
-      </div>
-      <app-sub-span-typography [content]="'02/2020 - 09/2020'"></app-sub-span-typography>
-    </div>
+    <app-card [itemCollection]="this.collection"></app-card>
     <app-divider [height]="'0.025rem'" [width]="'100%'"></app-divider>
   </div>
 </div>
