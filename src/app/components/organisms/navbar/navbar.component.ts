@@ -29,6 +29,7 @@ import { CommonModule } from '@angular/common';
         padding: 0 1.5rem;
 
         color: var(--light--primary--color);
+        box-shadow: rgb(0 0 0 / 25%) 0px 0px 4px;
 
         transition: 1s;
 
