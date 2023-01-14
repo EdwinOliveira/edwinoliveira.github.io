@@ -5,18 +5,25 @@ import { AboutMeComponent } from './components/templates/about-me/about-me.compo
 import { ThemeService } from './shared/services/theme/theme.service';
 import { AcademicCareerComponent } from "./components/templates/academic-career/academic-career.component";
 import { ProfessionalCareerComponent } from "./components/templates/professional-career/professional-career.component";
+import { TechStackComponent } from "./components/templates/tech-stack/tech-stack.component";
+import { BrandTypographyComponent } from "./components/atoms/typographies/brand/brand-typography.component";
+import { ParagraphTypographyComponent } from "./components/atoms/typographies/paragraph/paragraph-typography.component";
 
 @Component({
     standalone: true,
     selector: 'app-root',
     template: `
     <div class="wrapper" *ngIf="this.themeService.state$ | async as state" [ngClass]="state">
-      <img class="wallpaper" src="./../assets/svgs/splashart-bg.jpg" alt="background">
       <app-navbar></app-navbar>
+      <div class="wrapper--group">
+        <app-brand-typography [content]="'Hello. My name is Diogo Oliveira'"></app-brand-typography>
+        <app-paragraph-typography [content]="'Software engineer deeply interested in Software Architecture'"></app-paragraph-typography>
+      </div>
       <div class="wrapper--box">
         <app-about-me></app-about-me>
         <app-academic-career></app-academic-career>
         <app-professional-career></app-professional-career>
+        <app-tech-stack></app-tech-stack>
       </div>
     </div>
   `,
@@ -37,8 +44,23 @@ import { ProfessionalCareerComponent } from "./components/templates/professional
         display: flex;
         flex-direction: column;
 
-        .wallpaper {
-          height: 50vh;
+        &--group {
+          background-image: url("./../assets/svgs/splashart-bg.jpg");
+          background-size: cover;
+          background-repeat: no-repeat;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          text-align: center;
+
+          gap: 0.5rem;
+
+          color: var(--light--primary--color);
+
+          min-height: 35vh;
           width: 100vw;
         }
 
@@ -59,7 +81,7 @@ import { ProfessionalCareerComponent } from "./components/templates/professional
     `,
     ],
     providers: [ThemeService],
-    imports: [NavbarComponent, CommonModule, AboutMeComponent, AcademicCareerComponent, ProfessionalCareerComponent]
+    imports: [NavbarComponent, CommonModule, AboutMeComponent, AcademicCareerComponent, ProfessionalCareerComponent, TechStackComponent, BrandTypographyComponent, ParagraphTypographyComponent]
 })
 export class AppComponent {
   public constructor(private readonly _themeService: ThemeService) {

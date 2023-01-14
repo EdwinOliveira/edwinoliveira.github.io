@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { IconCollection } from 'src/app/shared/@constants/icon.collection';
 import { IconGroupComponent } from '../../molecules/icon-group/icon-group.component';
 import { BrandTypographyComponent } from '../../atoms/typographies/brand/brand-typography.component';
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   selector: 'app-navbar',
   template: `
-    <div class="wrapper" [ngStyle]="{'background-color': this.backgroundColor}">
+    <div class="wrapper">
       <div class="wrapper--box">
         <div class="wrapper--box item-collection">
           <app-icon-group [iconCollection]="this.socialNetworkIconCollection"></app-icon-group>
@@ -28,7 +28,12 @@ import { CommonModule } from '@angular/common';
         min-height: 4rem;
         padding: 0 1.5rem;
 
+        background-image: url("./../../../../assets/svgs/splashart-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
         color: var(--light--primary--color);
+
         box-shadow: rgb(0 0 0 / 25%) 0px 0px 4px;
 
         transition: 1s;
@@ -56,22 +61,6 @@ import { CommonModule } from '@angular/common';
 export class NavbarComponent {
   private readonly _socialNetworkIconCollection: Array<IconCollection>;
   private readonly _serviceIconCollection: Array<IconCollection>;
-
-  private _backgroundColor: string = "transparent";
-
-  public get backgroundColor(): string {
-    return this._backgroundColor;
-  }
-
-  @HostListener("window:scroll", ['$event'])
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  onWindowScroll(event: Event){
-    if(window.scrollY >= ((window.innerHeight - 100) / 2)) {
-      this._backgroundColor = "var(--purple--primary--color)"
-    } else {
-      this._backgroundColor = "transparent"
-    }
-  }
 
   public constructor() {
     this._socialNetworkIconCollection = new Array<IconCollection>(IconCollection.GITHUB, IconCollection.LINKEDIN);
