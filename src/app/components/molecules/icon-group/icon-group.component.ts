@@ -13,10 +13,14 @@ import { ThemeIconComponent } from '../../atoms/icons/theme-icon/theme-icon.comp
     <div class="wrapper">
       <div class="wrapper--box" *ngFor="let icon of iconCollection">
         <div *ngIf="icon === iconService.linkedinIcon" class="wrapper--box linkedin-icon">
-          <app-linkedin-icon></app-linkedin-icon>
+          <a target="_blank" href="https://www.linkedin.com/in/diogooliveira97/">
+            <app-linkedin-icon></app-linkedin-icon>
+          </a>
         </div>
         <div *ngIf="icon === iconService.githubIcon" class="wrapper--box github-icon">
-          <app-github-icon></app-github-icon>
+          <a target="_blank" href="https://github.com/EdwinOliveira">
+            <app-github-icon></app-github-icon>
+          </a>
         </div>
         <div *ngIf="icon === iconService.themeIcon" class="wrapper--box theme-icon">
           <app-theme-icon></app-theme-icon>
