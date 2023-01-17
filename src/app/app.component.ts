@@ -70,7 +70,7 @@ import { ParagraphTypographyComponent } from "./components/atoms/typographies/pa
         }
 
         .wrapper--box {
-          padding: 1rem 10%;
+          padding: 2rem 10%;
 
           display: flex;
           flex-direction: column;

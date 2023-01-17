@@ -7,7 +7,18 @@
     &.icon-collection {
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
       flex-wrap: wrap;
+    }
+
+    @media(min-width: 785px) {
+      &.icon-collection {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        gap: 1.5;
+      }
     }
   }
 }
