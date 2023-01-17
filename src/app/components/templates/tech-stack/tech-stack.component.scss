@@ -4,6 +4,11 @@
     flex-direction: column;
     gap: 1rem;
 
+    &.icon-collection {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 }
 

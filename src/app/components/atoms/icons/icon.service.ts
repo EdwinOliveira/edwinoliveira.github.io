@@ -18,4 +18,16 @@ export class IconService {
   public get companyIcon(): IconCollection {
     return IconCollection.COMPANY;
   }
+
+  public get angularIcon(): IconCollection {
+    return IconCollection.ANGULAR;
+  }
+
+  public get nestIcon(): IconCollection {
+    return IconCollection.NEST;
+  }
+
+  public get nodeIcon(): IconCollection {
+    return IconCollection.NODE;
+  }
 }

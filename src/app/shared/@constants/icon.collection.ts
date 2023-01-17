@@ -3,4 +3,7 @@ export enum IconCollection {
   LINKEDIN = "LINKEDIN",
   THEME = "THEME",
   COMPANY = "COMPANY",
+  ANGULAR = "ANGULAR",
+  NEST = "NEST",
+  NODE = "NODE"
 }
