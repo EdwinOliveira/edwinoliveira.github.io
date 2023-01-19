@@ -52,6 +52,7 @@
     }
   }
 }
+
 @media(min-width: 1300px) {
   .wrapper {
     &--box {
@@ -66,7 +67,7 @@
           align-items: center;
 
           gap: 1rem;
-          min-height: 30rem;
+          min-height: 26rem;
 
           box-shadow: -1rem 0 3rem #000;
           border-radius: 1.50rem;

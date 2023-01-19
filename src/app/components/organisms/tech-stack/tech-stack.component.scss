@@ -1,0 +1,99 @@
+.wrapper {
+  /* Change this to change the appearance of the hexaons */
+  --hex-width: 6.5rem;
+  --hex-between: 0.5rem;
+
+  /* Other hexagon dimentions */
+  --hex-height: calc(var(--hex-width) / 1.73 /* sqrt(3) */);
+  --hex-margin: calc(var(--hex-width) / 2);
+  --hex-border: calc(var(--hex-margin) / 1.73 /* sqrt(3) */);
+  --hex-transition: all .2s ease;
+
+  /* Colors */
+  --color-hex-default: var(--purple--color);
+  --color-hex-hover: #FFFFFF;
+
+  &--box {
+    &.group {
+      margin: 1.5rem 0;
+      justify-content: center;
+
+      display: grid;
+      grid-template-columns: var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width);
+      grid-auto-rows: calc(var(--hex-width) - 28.87px/2);
+      grid-gap: var(--hex-between) var(--hex-between);
+
+      padding-bottom: var(--hex-border);
+
+      &.hexagon {
+        background-color: var(--color-hex-default);
+        cursor: pointer;
+        display: flex;
+        fill: white;
+        height: var(--hex-height);
+        justify-content: center;
+        margin: var(--hex-border) 0;
+        position: relative;
+        transition: var(--hex-transition);
+        width: var(--hex-width);
+
+        &::after,
+        &::before {
+          border-left: var(--hex-margin) solid transparent;
+          border-right: var(--hex-margin) solid transparent;
+          content: "";
+          left: 0;
+          position: absolute;
+          transition: var(--hex-transition);
+          width: 0;
+        }
+
+        &::after {
+          border-top: var(--hex-border) solid var(--color-hex-default);
+          top: 100%;
+          width: 0;
+        }
+
+
+        &::before {
+          border-bottom: var(--hex-border) solid var(--color-hex-default);
+          bottom: 100%;
+        }
+
+        &:hover {
+          background-color: var(--color-hex-hover);
+        }
+
+        &:hover::after,
+        &:hover::before {
+          border-top-color: var(--color-hex-hover);
+          border-bottom-color: var(--color-hex-hover);
+        }
+
+        &:nth-child(8n + 5),
+        &:nth-child(8n + 6),
+        &:nth-child(8n + 7),
+        &:nth-child(8n + 8) {
+          margin-left: calc(var(--hex-width) / 2 + var(--hex-between) / 2);
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:700px) {
+  .wrapper {
+    --hex-width: 4rem;
+    --hex-between: 0.50rem;
+  }
+}
+
+@media(max-width: 425px) {
+  .wrapper {
+    &--box {
+      &.group {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
