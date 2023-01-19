@@ -1,0 +1,8 @@
+.wrapper {
+  &--box {
+    &.typography {
+      font-size: clamp(0.6rem, 0.6rem + 0.2vw, 1rem);
+      line-height: 2rem;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.wrapper {
+  &--box {
+    &.content {
+      padding: 2rem 0 ;
+
+      display: flex;
+      flex-direction: column;
+
+      &.card {
+        padding: 1.5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+
+        min-height: 12rem;
+        width: 100%;
+        top: 0px;
+
+        background-color: var(--dark--color);
+        color: var(--light--color);
+
+        box-shadow: 0 0 0.25rem #000;
+
+        border-radius: 0.25rem;
+        transition: 0.4s ease-out;
+
+        div {
+          display: flex;
+          flex-direction: row;
+
+          gap: 0.5rem;
+        }
+      }
+
+      &.card:not(:first-child) {
+          margin-top: -25px;
+      }
+
+      &.card:hover {
+        transform: translateY(-20px);
+        transition: 0.4s ease-out;
+      }
+
+      &.card:hover ~ &.card {
+        position: relative;
+        top: 5px;
+        transition: 0.4s ease-out;
+      }
+    }
+  }
+}
+@media(min-width: 1300px) {
+  .wrapper {
+    &--box {
+      &.content {
+        flex-direction: row;
+
+        &.card {
+          text-align: center;
+
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          gap: 1rem;
+          min-height: 30rem;
+
+          box-shadow: -1rem 0 3rem #000;
+          border-radius: 1.50rem;
+
+          left: 0px;
+          top: auto;
+
+          div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 0.5rem;
+          }
+        }
+
+        &.card:not(:first-child) {
+            margin-left: -50px;
+            margin-top: auto;
+        }
+
+        &.card:hover {
+          transform: translateY(-20px);
+          transition: 0.4s ease-out;
+        }
+
+        &.card:hover ~ &.card {
+          position: relative;
+          left: 50px;
+          top: auto;
+          transition: 0.4s ease-out;
+        }
+      }
+    }
+  }
+
+}

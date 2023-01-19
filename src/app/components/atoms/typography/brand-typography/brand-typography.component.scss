@@ -1,0 +1,9 @@
+.wrapper {
+  &--box {
+    &.typography {
+      color: var(--light--color);
+      font-size: clamp(1rem, 1rem + 1vw, 3rem);
+      font-weight: bold;
+    }
+  }
+}

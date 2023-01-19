@@ -1,3 +1,13 @@
 .wrapper {
   min-height: 100vh;
+
+  &--box {
+    &.sections {
+      padding: 0 12.5vw;
+
+      * {
+        padding: 1.5rem 1.5rem 0 1.5rem;
+      }
+    }
+  }
 }
