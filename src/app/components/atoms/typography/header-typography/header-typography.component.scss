@@ -1,9 +1,8 @@
 .wrapper {
   &--box {
     &.typography {
-      font-size: clamp(0.7rem, 0.7rem + 0.2vw, 1.1rem);
-      opacity: 0.25;
-      font-weight: bold;
+      font-size: clamp(1rem, 1rem + 1.4vw, 1.8rem);
+      font-weight: 100;
     }
   }
 }

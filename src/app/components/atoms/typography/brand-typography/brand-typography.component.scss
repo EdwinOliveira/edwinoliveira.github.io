@@ -2,7 +2,7 @@
   &--box {
     &.typography {
       color: var(--light--color);
-      font-size: clamp(1rem, 1rem + 1vw, 3rem);
+      font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
       font-weight: bold;
     }
   }
