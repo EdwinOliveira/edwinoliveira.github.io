@@ -27,7 +27,7 @@
         align-items: center;
         justify-content: center;
 
-        min-width: 19rem;
+        min-width: 100%;
 
         background-color: #4b02aa;
         // clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
@@ -59,6 +59,7 @@
         &.hexagon {
           padding: 0;
           height: 10vh;
+          min-width: 10rem;
         }
       }
     }

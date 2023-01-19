@@ -11,12 +11,14 @@ import { NodeIconComponent } from "../../atoms/icons/node-icon/node-icon.compone
 import { JasmineIconComponent } from "../../atoms/icons/jasmine-icon/jasmine-icon.component";
 import { JestIconComponent } from "../../atoms/icons/jest-icon/jest-icon.component";
 import { AzureIconComponent } from "../../atoms/icons/azure-icon/azure-icon.component";
+import { HtmlIconComponent } from "../../atoms/icons/html-icon/html-icon.component";
+import { CssIconComponent } from "../../atoms/icons/css-icon/css-icon.component";
 
 @Component({
     selector: 'app-tech-stack',
     standalone: true,
     templateUrl: './tech-stack.component.html',
     styleUrls: ['./tech-stack.component.scss'],
-    imports: [CommonModule, HeaderTypographyComponent, DividerComponent, AngularIconComponent, VueIconComponent, JavaIconComponent, TypescriptIconComponent, NestIconComponent, NodeIconComponent, JasmineIconComponent, JestIconComponent, AzureIconComponent]
+    imports: [CommonModule, HeaderTypographyComponent, DividerComponent, AngularIconComponent, VueIconComponent, JavaIconComponent, TypescriptIconComponent, NestIconComponent, NodeIconComponent, JasmineIconComponent, JestIconComponent, AzureIconComponent, HtmlIconComponent, CssIconComponent]
 })
 export class TechStackComponent {}

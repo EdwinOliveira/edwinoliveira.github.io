@@ -11,12 +11,15 @@ import { JasmineIconComponent } from "../../atoms/icons/jasmine-icon/jasmine-ico
 import { JavaIconComponent } from "../../atoms/icons/java-icon/java-icon.component";
 import { JestIconComponent } from "../../atoms/icons/jest-icon/jest-icon.component";
 import { VueIconComponent } from "../../atoms/icons/vue-icon/vue-icon.component";
+import { HtmlIconComponent } from "../../atoms/icons/html-icon/html-icon.component";
+import { CssIconComponent } from "../../atoms/icons/css-icon/css-icon.component";
+import { ScssIconComponent } from "../../atoms/icons/scss-icon/scss-icon.component";
 
 @Component({
     selector: 'app-my-business-career',
     standalone: true,
     templateUrl: './my-business-career.component.html',
     styleUrls: ['./my-business-career.component.scss'],
-    imports: [CommonModule, HeaderTypographyComponent, DividerComponent, SpanTypographyComponent, TypescriptIconComponent, PhpIconComponent, NodeIconComponent, AngularIconComponent, JasmineIconComponent, JavaIconComponent, JestIconComponent, VueIconComponent]
+    imports: [CommonModule, HeaderTypographyComponent, DividerComponent, SpanTypographyComponent, TypescriptIconComponent, PhpIconComponent, NodeIconComponent, AngularIconComponent, JasmineIconComponent, JavaIconComponent, JestIconComponent, VueIconComponent, HtmlIconComponent, CssIconComponent, ScssIconComponent]
 })
 export class MyBusinessCareerComponent {}
