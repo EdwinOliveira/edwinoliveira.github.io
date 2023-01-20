@@ -1,13 +1,13 @@
 .wrapper {
   img {
-    height: 2.5rem;
+    height: 2rem;
   }
 }
 
 @media(min-width: 700px) {
   .wrapper {
     img {
-      height: 3rem;
+      height: 2.5rem
     }
   }
 }
